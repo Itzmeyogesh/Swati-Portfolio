@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base body styles */
+body {
+  @apply bg-primary text-white scroll-smooth m-0 min-h-screen flex place-items-center;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings */
+h1, h2, h3 {
+  @apply font-bold;
+}
+
+/* Custom Flip Card Styles */
+.perspective {
+  perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Links */
+a {
+  font-weight: 500;
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #60a5fa;
+}
+
+/* Headings */
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* Buttons */
+button {
+  @apply rounded-lg px-4 py-2 text-white font-medium transition;
+  background-color: #1a1a1a;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: #38bdf8;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Light mode adjustments */
+@media (prefers-color-scheme: light) {
+  body {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #38bdf8;
+  }
+
+  button {
+    background-color: #f9f9f9;
+    color: #000;
+  }
+}
