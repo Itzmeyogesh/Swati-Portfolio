@@ -29,28 +29,33 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="min-h-screen px-6 py-16 bg-secondary">
+    <section
+      id="projects"
+      className="min-h-[50vh] px-4 py-12 sm:py-16 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] text-white"
+    >
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
+        className="max-w-6xl mx-auto"
       >
-        <h2 className="text-4xl font-bold text-accent mb-12 text-center">Projects</h2>
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+        <h2 className="text-3xl sm:text-4xl font-bold text-accent mb-10 text-center">Projects</h2>
+
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((proj, i) => (
             <motion.div
               key={i}
-              whileHover={{ scale: 1.05 }}
-              className="bg-primary rounded-2xl overflow-hidden shadow-md transition-shadow duration-300"
+              whileHover={{ scale: 1.03 }}
+              className="bg-primary rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <img
                 src={proj.image}
                 alt={proj.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-44 sm:h-48 object-cover"
               />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-2">{proj.title}</h3>
-                <p className="text-gray-300 text-sm mb-2">{proj.description}</p>
+              <div className="p-5 sm:p-6 space-y-3">
+                <h3 className="text-lg sm:text-xl font-semibold text-white">{proj.title}</h3>
+                <p className="text-sm text-gray-300 leading-relaxed">{proj.description}</p>
                 <p className="text-sm text-accent italic">{proj.techStack}</p>
               </div>
             </motion.div>
